@@ -74,15 +74,15 @@ public static class Catcher
                 
                 return changedMovies;
             case 2:
-                attributeNumber = ConsoleOperations.DynamicMenu(ConsoleOperations.chooseParameterMenu);
-                int orderNumber = ConsoleOperations.DynamicMenu(ConsoleOperations.sortOrderMenu);
+                attributeNumber = ConsoleOperations.DynamicMenu(ConsoleOperations.ChooseParameterMenu);
+                int orderNumber = ConsoleOperations.DynamicMenu(ConsoleOperations.SortOrderMenu);
                 changedMovies = Sorter.Sort(changedMovies, (Movie.MovieAttributes)(attributeNumber - 1), orderNumber);
                 Movie.MovieInfoUpdateFire(new DataUpdateEventArgs(changedMovies));
                 
                 return changedMovies;
             case 3:
                 int numberOfMovie = ConsoleOperations.DynamicMenu(ConsoleOperations.ChooseMovieMenu(currentMovies.ToArray()));
-                attributeNumber = ConsoleOperations.DynamicMenu(ConsoleOperations.chooseParameterMenu);
+                attributeNumber = ConsoleOperations.DynamicMenu(ConsoleOperations.ChooseParameterMenu);
                 do
                 {
                     string attributeName = Movie.GetNameOfAttribute((Movie.MovieAttributes)(attributeNumber - 1));

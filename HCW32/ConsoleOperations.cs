@@ -71,7 +71,7 @@ public static class ConsoleOperations
     /// <summary>
     /// Main menu options.
     /// </summary>
-    public static string[] mainMenu =
+    public static readonly string[] MainMenu =
     {
         "1. Enter path to file for reading or writing.",
         "2. Sort data by one parameter.",
@@ -81,7 +81,7 @@ public static class ConsoleOperations
     /// <summary>
     /// Sorting menu options.
     /// </summary>
-    public static string[] sortOrderMenu =
+    public static readonly string[] SortOrderMenu =
     {
         "1. Alphabetical order / from small to big.",
         "2. Reversed alphabetical order / from big to small."
@@ -90,7 +90,7 @@ public static class ConsoleOperations
     /// <summary>
     /// Menu with two options: the first for add some objects to collection, the second exits the program.
     /// </summary>
-    public static string[] addExitMenu =
+    public static readonly string[] AddExitMenu =
     {
         "1. Add data.",
         "2. Exit program."
@@ -99,7 +99,7 @@ public static class ConsoleOperations
     /// <summary>
     /// Movie object attributes menu.
     /// </summary>
-    public static string[] chooseParameterMenu =
+    public static readonly string[] ChooseParameterMenu =
     {
         "1. Movie Title.",
         "2. Earnings.",
@@ -112,7 +112,7 @@ public static class ConsoleOperations
     /// <summary>
     /// Menu for asking to rerun program.
     /// </summary>
-    public static string[] rerunMenu =
+    public static readonly string[] RerunMenu =
     {
         "1. Rerun program.",
         "2. Exit."

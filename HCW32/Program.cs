@@ -23,7 +23,7 @@ class Program
             List<Movie> movies = Catcher.GetMoviesInfoFromFile(autoSaver);
             while (movies == null)
             {
-                int needAddNewData = ConsoleOperations.DynamicMenu(ConsoleOperations.addExitMenu);
+                int needAddNewData = ConsoleOperations.DynamicMenu(ConsoleOperations.AddExitMenu);
                 if (needAddNewData == 2)
                 {
                     break;
@@ -38,11 +38,11 @@ class Program
                 int userChoice;
                 do
                 {
-                    userChoice = ConsoleOperations.DynamicMenu(ConsoleOperations.mainMenu);
+                    userChoice = ConsoleOperations.DynamicMenu(ConsoleOperations.MainMenu);
                     List<Movie> updatedMovies = Catcher.MainAction(movies, autoSaver, userChoice);
                 } while (userChoice == 1);
 
-                exitPoint = ConsoleOperations.DynamicMenu(ConsoleOperations.rerunMenu);
+                exitPoint = ConsoleOperations.DynamicMenu(ConsoleOperations.RerunMenu);
             }
 
             Movie.MovieInfoUpdated -= autoSaver.OnDataUpdate;
