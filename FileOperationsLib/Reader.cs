@@ -17,8 +17,8 @@ public static class Reader
     {
         string content = File.ReadAllText(path);
         List<Movie>? movies = JsonSerializer.Deserialize<List<Movie>>(content);
-        DataUpdateEventArgs firstUpdate = new DataUpdateEventArgs(movies);        
-        
+        DataUpdateEventArgs firstUpdate = new DataUpdateEventArgs(movies);
+
         return (movies, firstUpdate);
-    } 
+    }
 }

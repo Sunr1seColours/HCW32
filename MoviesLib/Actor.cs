@@ -13,19 +13,19 @@ public class Actor
     /// </summary>
     [JsonPropertyName("actorId")]
     public string Id { get; set; }
-    
+
     /// <summary>
     /// Property to get and set a name of actor.
     /// </summary>
     [JsonPropertyName("actorName")]
     public string Name { get; set; }
-    
+
     /// <summary>
     /// Property to get and set a nationality of actor.
     /// </summary>
     [JsonPropertyName("nationality")]
     public string Nationality { get; set; }
-    
+
     /// <summary>
     /// Property to get and set an earnings of actor.
     /// </summary>
@@ -35,13 +35,15 @@ public class Actor
     /// <summary>
     /// Class constructor for Actor object without any parameters.
     /// </summary>
-    public Actor() { }
+    public Actor()
+    {
+    }
 
     /// <summary>
     /// Event which fires when earnings of movie changes.
     /// </summary>
     public static event EventHandler<EarningChangedEventArgs> Updated;
-    
+
     /// <summary>
     /// Creates string in JSON format of Actor object.
     /// </summary>
@@ -55,7 +57,7 @@ public class Actor
         inJsonFormat.Append($"        \"nationality\": \"{Nationality}\",\n");
         inJsonFormat.Append($"        \"earnings\": {Earnings.ToString().Replace(',', '.')}\n");
         inJsonFormat.Append("      }");
-        
+
         return inJsonFormat.ToString();
     }
 }

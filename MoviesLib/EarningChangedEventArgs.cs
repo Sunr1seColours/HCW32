@@ -9,11 +9,13 @@ public class EarningChangedEventArgs : EventArgs
     /// Property to get time which object contains.
     /// </summary>
     public DateTime Time { get; }
-    
+
     /// <summary>
     /// Constructor which creates object with current time.
     /// </summary>
-    public EarningChangedEventArgs() : this (DateTime.Now) { }
+    public EarningChangedEventArgs() : this(DateTime.Now)
+    {
+    }
 
     /// <summary>
     /// Constructor which creates object with given time.

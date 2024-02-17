@@ -24,7 +24,7 @@ public static class Sorter
                 case Movie.MovieAttributes.Genre:
                     moviesAttributes[i] = movies[i].Genre;
                     break;
-            }    
+            }
         }
 
         return moviesAttributes;
@@ -55,12 +55,12 @@ public static class Sorter
                 case Movie.MovieAttributes.Rating:
                     moviesAttributes[i] = movies[i].Rating;
                     break;
-            }    
+            }
         }
 
         return moviesAttributes;
     }
-    
+
     /// <summary>
     /// Sorts list of Movie objects.
     /// </summary>
@@ -73,9 +73,9 @@ public static class Sorter
         List<Movie> sortedMovies = new List<Movie>(moviesToSort);
         switch (sortParameter)
         {
-            case Movie.MovieAttributes.Title: 
+            case Movie.MovieAttributes.Title:
             case Movie.MovieAttributes.Genre:
-                string[] textAttributesToSort = GetStringMoviesAttributes(moviesToSort, sortParameter);        
+                string[] textAttributesToSort = GetStringMoviesAttributes(moviesToSort, sortParameter);
                 for (int i = 0; i < sortedMovies.Count; i++)
                 {
                     for (int j = 0; j < sortedMovies.Count - 1 - i; j++)
@@ -91,14 +91,15 @@ public static class Sorter
 
                 break;
             default:
-                double[] digitalAttributesToSort = GetDigitalMoviesAttributes(moviesToSort, sortParameter);        
+                double[] digitalAttributesToSort = GetDigitalMoviesAttributes(moviesToSort, sortParameter);
                 for (int i = 0; i < sortedMovies.Count; i++)
                 {
                     for (int j = 0; j < sortedMovies.Count - 1 - i; j++)
                     {
                         if (digitalAttributesToSort[j] > digitalAttributesToSort[j + 1])
                         {
-                            (digitalAttributesToSort[j], digitalAttributesToSort[j + 1]) = (digitalAttributesToSort[j + 1], digitalAttributesToSort[j]);
+                            (digitalAttributesToSort[j], digitalAttributesToSort[j + 1]) = (
+                                digitalAttributesToSort[j + 1], digitalAttributesToSort[j]);
                             (sortedMovies[j], sortedMovies[j + 1]) = (sortedMovies[j + 1], sortedMovies[j]);
                         }
                     }

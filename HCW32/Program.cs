@@ -5,6 +5,7 @@ namespace HCW32;
 
 class Program
 {
+    // /Users/zemld/Учеба/Шарпы/КДЗ32/9V.json"
     static void Main(string[] args)
     {
         int exitPoint;
@@ -14,10 +15,10 @@ class Program
             Writer writer = new Writer();
             Movie.MovieInfoUpdated += autoSaver.OnDataUpdate;
             autoSaver.GetNewUpdate += writer.OnGetNewUpdate;
-            
+
             autoSaver.Updates = new List<DataUpdateEventArgs>();
             exitPoint = 2;
-            
+
             Catcher.GoToFile();
             List<Movie> movies = Catcher.GetMoviesInfoFromFile(autoSaver);
             while (movies == null)
@@ -27,6 +28,7 @@ class Program
                 {
                     break;
                 }
+
                 Catcher.GoToFile();
                 movies = Catcher.GetMoviesInfoFromFile(autoSaver);
             }
@@ -39,13 +41,12 @@ class Program
                     userChoice = ConsoleOperations.DynamicMenu(ConsoleOperations.mainMenu);
                     List<Movie> updatedMovies = Catcher.MainAction(movies, autoSaver, userChoice);
                 } while (userChoice == 1);
+
                 exitPoint = ConsoleOperations.DynamicMenu(ConsoleOperations.rerunMenu);
             }
 
             Movie.MovieInfoUpdated -= autoSaver.OnDataUpdate;
             autoSaver.GetNewUpdate -= writer.OnGetNewUpdate;
         } while (exitPoint == 1);
-        
-        // /Users/zemld/Учеба/Шарпы/КДЗ32/9V.json"
     }
 }

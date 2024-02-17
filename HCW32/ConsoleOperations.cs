@@ -29,10 +29,10 @@ public static class ConsoleOperations
         Console.WriteLine("And to choose current option, tap 'Enter'.");
         ConsoleKey choice = Console.ReadKey().Key;
         Console.WriteLine();
-        
+
         return choice;
     }
-    
+
     /// <summary>
     /// Changes chosen point of menu.
     /// </summary>
@@ -67,7 +67,7 @@ public static class ConsoleOperations
 
         return currentOption;
     }
-    
+
     /// <summary>
     /// Main menu options.
     /// </summary>
@@ -86,7 +86,7 @@ public static class ConsoleOperations
         "1. Alphabetical order / from small to big.",
         "2. Reversed alphabetical order / from big to small."
     };
-    
+
     /// <summary>
     /// Menu with two options: the first for add some objects to collection, the second exits the program.
     /// </summary>
@@ -117,7 +117,7 @@ public static class ConsoleOperations
         "1. Rerun program.",
         "2. Exit."
     };
-    
+
     /// <summary>
     /// Asks user to enter a path to file.
     /// </summary>
@@ -127,7 +127,7 @@ public static class ConsoleOperations
         Console.Write($"Enter a path to file for reading: ");
         return Console.ReadLine();
     }
-    
+
     /// <summary>
     /// Creates string array with the same length which array of Movie object has.
     /// </summary>
@@ -187,7 +187,7 @@ public static class ConsoleOperations
         Console.Write($"Enter a new value of {parameterName}: ");
         return Console.ReadLine();
     }
-    
+
     /// <summary>
     /// Wait for user's action.
     /// </summary>

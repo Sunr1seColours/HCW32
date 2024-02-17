@@ -42,7 +42,7 @@ public static class Catcher
         try
         {
             (movies, DataUpdateEventArgs getMoviesInfo) = Reader.ReadFile(Connector.PathToFileToRead);
-            Movie.Update(getMoviesInfo);
+            Movie.MovieInfoUpdateFire(getMoviesInfo);
         }
         catch (Exception e)
         {
@@ -70,14 +70,14 @@ public static class Catcher
             case 1:
                 GoToFile();
                 changedMovies.AddRange(GetMoviesInfoFromFile(autoSaver));
-                Movie.Update(new DataUpdateEventArgs(changedMovies));
+                Movie.MovieInfoUpdateFire(new DataUpdateEventArgs(changedMovies));
                 
                 return changedMovies;
             case 2:
                 attributeNumber = ConsoleOperations.DynamicMenu(ConsoleOperations.chooseParameterMenu);
                 int orderNumber = ConsoleOperations.DynamicMenu(ConsoleOperations.sortOrderMenu);
                 changedMovies = Sorter.Sort(changedMovies, (Movie.MovieAttributes)(attributeNumber - 1), orderNumber);
-                Movie.Update(new DataUpdateEventArgs(changedMovies));
+                Movie.MovieInfoUpdateFire(new DataUpdateEventArgs(changedMovies));
                 
                 return changedMovies;
             case 3:
@@ -90,7 +90,7 @@ public static class Catcher
                     {
                         changedMovies[numberOfMovie - 1].ChangeOneAttribute((Movie.MovieAttributes)(attributeNumber - 1),
                             ConsoleOperations.GetNewParameterValue(attributeName));
-                        Movie.Update(new DataUpdateEventArgs(changedMovies));
+                        Movie.MovieInfoUpdateFire(new DataUpdateEventArgs(changedMovies));
                         
                         return changedMovies;
                     }

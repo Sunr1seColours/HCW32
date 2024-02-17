@@ -10,7 +10,7 @@ public class DataUpdateEventArgs : EventArgs
     /// Property to get time that object contains. 
     /// </summary>
     public DateTime Time { get; }
-    
+
     /// <summary>
     /// Property to get collection of Movie objects.
     /// </summary>
@@ -20,8 +20,10 @@ public class DataUpdateEventArgs : EventArgs
     /// Constructor which creates object with current time.
     /// </summary>
     /// <param name="contents">Collection of Movie objects.</param>
-    public DataUpdateEventArgs(List<Movie> contents) : this(DateTime.Now, contents) { }
-    
+    public DataUpdateEventArgs(List<Movie> contents) : this(DateTime.Now, contents)
+    {
+    }
+
     /// <summary>
     /// Constructor with given time.
     /// </summary>

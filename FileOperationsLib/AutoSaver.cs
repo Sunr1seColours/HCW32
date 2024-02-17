@@ -11,7 +11,7 @@ public class AutoSaver
     /// Collection of Movies updates.
     /// </summary>
     public List<DataUpdateEventArgs> Updates { get; set; }
-    
+
     /// <summary>
     /// Base constructor. Creates new collection of Movies updates.
     /// </summary>
@@ -29,7 +29,7 @@ public class AutoSaver
     /// Event with 'UpdateHappened' delegate at the base
     /// </summary>
     public event UpdateHappened GetNewUpdate;
-    
+
     /// <summary>
     /// Reacts on updates in collection of Movie objects.
     /// </summary>

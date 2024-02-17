@@ -20,7 +20,7 @@ public class Writer
     public Writer()
     {
         UpdatesCount = 0;
-    } 
+    }
 
     /// <summary>
     /// Reacts on update in collection of Movie objects.
@@ -40,8 +40,9 @@ public class Writer
             moviesReadyToWrite.Append(movie.ToJSON());
             moviesReadyToWrite.Append(",\n");
         }
-        moviesReadyToWrite.Append("]");
-        
+
+        moviesReadyToWrite.Append(']');
+
         string path = $"9V_tmp{UpdatesCount}.json";
         using (StreamWriter saver = new StreamWriter(path))
         {

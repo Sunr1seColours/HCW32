@@ -11,7 +11,7 @@ public class Connector
     /// Private pole which contains path to file which will be read.
     /// </summary>
     private static string? _pathToFileToRead;
-    
+
     /// <summary>
     /// Property to get and set path to file for reading.
     /// </summary>
@@ -30,6 +30,7 @@ public class Connector
                 {
                     throw new FileNotFoundException("There is no file you're looking for.");
                 }
+
                 _pathToFileToRead = value;
             }
             else

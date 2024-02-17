@@ -16,13 +16,13 @@ public class Movie
     private void OnNewActorsSalary(object? sender, EarningChangedEventArgs newEarning)
     {
         double newSalary = Earnings / Actors.Length;
-        
+
         foreach (Actor actor in Actors)
         {
             actor.Earnings = newSalary;
-        }    
+        }
     }
-    
+
     /// <summary>
     /// Enumeration which contains movie attributes.
     /// </summary>
@@ -35,49 +35,49 @@ public class Movie
         Genre,
         Rating
     }
-    
+
     /// <summary>
     /// Property to get ID of movie.
     /// </summary>
     [JsonPropertyName("movieId")]
     public string Id { get; init; }
-    
+
     /// <summary>
     /// Property to get and set title of movie.
     /// </summary>
     [JsonPropertyName("movieTitle")]
     public string Title { get; set; }
-    
+
     /// <summary>
     /// Property to get and set information about movie's earnings.
     /// </summary>
     [JsonPropertyName("earnings")]
     public double Earnings { get; set; }
-    
+
     /// <summary>
     /// Property to get and set actors percent of movie.
     /// </summary>
     [JsonPropertyName("actorsPercent")]
     public double ActorsPercent { get; set; }
-    
+
     /// <summary>
     /// Property to get and set release year of movie.
     /// </summary>
     [JsonPropertyName("releaseYear")]
     public int ReleaseYear { get; set; }
-    
+
     /// <summary>
     /// Property to get and set genre of movie.
     /// </summary>
     [JsonPropertyName("genre")]
     public string Genre { get; set; }
-    
+
     /// <summary>
     /// Property to get and set rating of movie.
     /// </summary>
     [JsonPropertyName("rating")]
     public double Rating { get; set; }
-    
+
     /// <summary>
     /// Property to get and set array of actors which are in the movie.
     /// </summary>
@@ -91,7 +91,7 @@ public class Movie
     {
         Updated += OnNewActorsSalary;
     }
-    
+
     /// <summary>
     /// Creates string in JSON format of Movie object.
     /// </summary>
@@ -113,13 +113,14 @@ public class Movie
             inJsonFormat.Append(actor.ToJSON());
             inJsonFormat.Append(",\n");
         }
+
         inJsonFormat.Remove(inJsonFormat.Length - 2, 2);
         inJsonFormat.Append("\n    ]\n");
         inJsonFormat.Append("  }");
-        
+
         return inJsonFormat.ToString();
     }
-    
+
     /// <summary>
     /// Event which fires when update in Movie information happens.
     /// </summary>
@@ -134,7 +135,7 @@ public class Movie
     /// Fires 'MovieInfoUpdated' event.
     /// </summary>
     /// <param name="updateInfo">Information about update.</param>
-    public static void Update(DataUpdateEventArgs updateInfo)
+    public static void MovieInfoUpdateFire(DataUpdateEventArgs updateInfo)
     {
         MovieInfoUpdated?.Invoke(null, updateInfo);
     }
@@ -153,6 +154,7 @@ public class Movie
         {
             throw new ArgumentNullException(nameof(newValue), "cant' be null.");
         }
+
         switch (attribute)
         {
             case MovieAttributes.Title:
@@ -168,6 +170,7 @@ public class Movie
                 {
                     throw new ArgumentException("Actors percent must be positive.");
                 }
+
                 ActorsPercent = actorsPercent;
                 break;
             case MovieAttributes.ReleaseYear:
@@ -177,6 +180,7 @@ public class Movie
                     throw new ArgumentOutOfRangeException(nameof(newValue),
                         "Film's release year must be in [1895; 2024].");
                 }
+
                 ReleaseYear = year;
                 break;
             case MovieAttributes.Genre:
@@ -187,7 +191,7 @@ public class Movie
                 break;
         }
     }
-    
+
     /// <summary>
     /// Get name of movie's attribute.
     /// </summary>
