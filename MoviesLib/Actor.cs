@@ -40,7 +40,7 @@ public class Actor
     }
 
     /// <summary>
-    /// Event which fires when earnings of movie changes.
+    /// Event which fires when earnings of actor changes.
     /// </summary>
     public static event EventHandler<EarningChangedEventArgs> Updated;
 
