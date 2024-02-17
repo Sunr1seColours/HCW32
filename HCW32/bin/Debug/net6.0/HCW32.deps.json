@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "HCW32/1.0.0": {
+        "dependencies": {
+          "FileOperationsLib": "1.0.0",
+          "MoviesLib": "1.0.0"
+        },
+        "runtime": {
+          "HCW32.dll": {}
+        }
+      },
+      "FileOperationsLib/1.0.0": {
+        "dependencies": {
+          "MoviesLib": "1.0.0"
+        },
+        "runtime": {
+          "FileOperationsLib.dll": {}
+        }
+      },
+      "MoviesLib/1.0.0": {
+        "runtime": {
+          "MoviesLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HCW32/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "FileOperationsLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MoviesLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

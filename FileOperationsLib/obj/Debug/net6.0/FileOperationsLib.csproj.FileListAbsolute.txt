@@ -1,0 +1,15 @@
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/bin/Debug/net6.0/FileOperationsLib.deps.json
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/bin/Debug/net6.0/FileOperationsLib.dll
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/bin/Debug/net6.0/FileOperationsLib.pdb
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/bin/Debug/net6.0/MoviesLib.dll
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/bin/Debug/net6.0/MoviesLib.pdb
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/obj/Debug/net6.0/FileOperationsLib.csproj.AssemblyReference.cache
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/obj/Debug/net6.0/FileOperationsLib.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/obj/Debug/net6.0/FileOperationsLib.AssemblyInfoInputs.cache
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/obj/Debug/net6.0/FileOperationsLib.AssemblyInfo.cs
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/obj/Debug/net6.0/FileOperationsLib.csproj.CoreCompileInputs.cache
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/obj/Debug/net6.0/FileOperationsLib.csproj.CopyComplete
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/obj/Debug/net6.0/FileOperationsLib.dll
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/obj/Debug/net6.0/refint/FileOperationsLib.dll
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/obj/Debug/net6.0/FileOperationsLib.pdb
+/Users/zemld/Projects/HSE/HCW32/FileOperationsLib/obj/Debug/net6.0/ref/FileOperationsLib.dll

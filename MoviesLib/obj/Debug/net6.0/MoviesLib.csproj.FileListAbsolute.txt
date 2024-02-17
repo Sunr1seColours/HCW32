@@ -1,0 +1,12 @@
+/Users/zemld/Projects/HSE/HCW32/MoviesLib/bin/Debug/net6.0/MoviesLib.deps.json
+/Users/zemld/Projects/HSE/HCW32/MoviesLib/bin/Debug/net6.0/MoviesLib.dll
+/Users/zemld/Projects/HSE/HCW32/MoviesLib/bin/Debug/net6.0/MoviesLib.pdb
+/Users/zemld/Projects/HSE/HCW32/MoviesLib/obj/Debug/net6.0/MoviesLib.csproj.AssemblyReference.cache
+/Users/zemld/Projects/HSE/HCW32/MoviesLib/obj/Debug/net6.0/MoviesLib.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zemld/Projects/HSE/HCW32/MoviesLib/obj/Debug/net6.0/MoviesLib.AssemblyInfoInputs.cache
+/Users/zemld/Projects/HSE/HCW32/MoviesLib/obj/Debug/net6.0/MoviesLib.AssemblyInfo.cs
+/Users/zemld/Projects/HSE/HCW32/MoviesLib/obj/Debug/net6.0/MoviesLib.csproj.CoreCompileInputs.cache
+/Users/zemld/Projects/HSE/HCW32/MoviesLib/obj/Debug/net6.0/MoviesLib.dll
+/Users/zemld/Projects/HSE/HCW32/MoviesLib/obj/Debug/net6.0/refint/MoviesLib.dll
+/Users/zemld/Projects/HSE/HCW32/MoviesLib/obj/Debug/net6.0/MoviesLib.pdb
+/Users/zemld/Projects/HSE/HCW32/MoviesLib/obj/Debug/net6.0/ref/MoviesLib.dll
