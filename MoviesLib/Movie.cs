@@ -152,7 +152,7 @@ public class Movie
     {
         if (string.IsNullOrEmpty(newValue))
         {
-            throw new ArgumentNullException(nameof(newValue), "cant' be null.");
+            throw new ArgumentNullException(nameof(newValue), "Can't be null.");
         }
 
         switch (attribute)

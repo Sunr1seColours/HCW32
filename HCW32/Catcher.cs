@@ -1,3 +1,4 @@
+using System.Text.Json;
 using FileOperationsLib;
 using MoviesLib;
 
@@ -44,9 +45,26 @@ public static class Catcher
             (movies, DataUpdateEventArgs getMoviesInfo) = Reader.ReadFile(Connector.PathToFileToRead);
             Movie.MovieInfoUpdateFire(getMoviesInfo);
         }
-        catch (Exception e)
+        catch (FileNotFoundException e)
         {
             Console.WriteLine(e.Message);
+        }
+        catch (ArgumentException e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        catch (IOException e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        catch (SystemException e)
+        {
+            Console.WriteLine(e.Message);
+        }
+        catch (JsonException e)
+        {
+            Console.WriteLine(e.Message);
+            ConsoleOperations.Waiter();
         }
 
         return movies;
@@ -88,15 +106,16 @@ public static class Catcher
                     string attributeName = Movie.GetNameOfAttribute((Movie.MovieAttributes)(attributeNumber - 1));
                     try
                     {
-                        changedMovies[numberOfMovie - 1].ChangeOneAttribute((Movie.MovieAttributes)(attributeNumber - 1),
+                        changedMovies[numberOfMovie - 1].ChangeOneAttribute(
+                            (Movie.MovieAttributes)(attributeNumber - 1),
                             ConsoleOperations.GetNewParameterValue(attributeName));
                         Movie.MovieInfoUpdateFire(new DataUpdateEventArgs(changedMovies));
-                        
+
                         return changedMovies;
                     }
-                    catch (Exception e)
+                    catch (ArgumentException e)
                     {
-                        Console.WriteLine(e);
+                        Console.WriteLine(e.Message);
                     }
                 } while (true);
             default:
