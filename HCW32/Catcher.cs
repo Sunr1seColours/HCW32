@@ -61,9 +61,9 @@ public static class Catcher
         {
             Console.WriteLine(e.Message);
         }
-        catch (JsonException e)
+        catch (JsonException)
         {
-            Console.WriteLine(e.Message);
+            Console.WriteLine("There are some problems with data in the file.");
             ConsoleOperations.Waiter();
         }
 

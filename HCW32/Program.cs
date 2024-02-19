@@ -5,7 +5,6 @@ namespace HCW32;
 
 class Program
 {
-    // /Users/zemld/Учеба/Шарпы/КДЗ32/9V.json"
     static void Main(string[] args)
     {
         int exitPoint;
